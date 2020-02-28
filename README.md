@@ -14,5 +14,13 @@ To set exactly the right size of 4.2Gb when partitionning disk, the size must be
 
 [Source](https://en.wikipedia.org/wiki/Octet_(computing))
 
-## SSH
+## Network and security
+
+### New user
+To make a user a sudoer type this command:
+```
+$> usermod -aG sudo user
+```
+
+### SSH
 ### Change port
