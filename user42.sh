@@ -1,2 +1,2 @@
 apt install sudo
-add user42 sudo
+adduser user42 sudo
