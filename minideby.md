@@ -38,7 +38,10 @@ adduser user sudo
 
 ### > Adresse ip statique
 
-Après
+```sh
+ip a #pour trouver son ip et broadcast
+ip route # pour trouver le gateway apres via
+```
 
 ### > Configuration de ssh
 
