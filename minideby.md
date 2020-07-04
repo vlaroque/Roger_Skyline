@@ -1,5 +1,7 @@
 # Roger Skyline
 
+.\VBoxManage.exe modifyhd 'C:\Users\user\VirtualBox VMs\deby\deby.vdi' --resizebyte 8000000000
+
 ## ==> Configuration de la VM
 
 Pour la taille du disque dur choisir 7.45 Gio qui équivalent à 8 Go du sujet

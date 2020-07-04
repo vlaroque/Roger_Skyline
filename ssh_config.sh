@@ -1,5 +1,5 @@
 apt install openssh-server
-echo "Port 22" >> /etc/ssh/sshd_config
+echo "Port 2222" >> /etc/ssh/sshd_config
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 echo "PasswordAuthentification no" >> /etc/ssh/sshd_config
 cp id_rsa.pub /home/user42/.ssh/
