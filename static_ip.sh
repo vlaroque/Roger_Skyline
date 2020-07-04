@@ -7,3 +7,4 @@ echo "\taddress 10.0.2.3/30" >> /etc/network/interfaces
 echo "\tgateway 10.0.2.2" >> /etc/network/interfaces
 fi
 systemctl restart networking
+echo finish
