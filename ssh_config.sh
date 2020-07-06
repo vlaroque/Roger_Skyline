@@ -1,5 +1,5 @@
 apt install openssh-server
-if grep -q "Port 2222" /etc/network/interfaces
+if grep -q "Port 2222" /etc/ssh/sshd_config
 then
 	echo "ssh_config already completed"
 else
