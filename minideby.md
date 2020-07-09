@@ -12,7 +12,7 @@ Dans la configuration de debian les unités sont des GB et pas des Gib donc sont
 
 Avec df on peut utiliser -B** en remplaçant * par GB pour des GIgabites et G pour des Gibibytes
 
-Utiliser `fdisk –l` pour voir 3,9 gb donc équivalent a 4,2 GB en taille conventionnelle, sinon calculer avec la taille des blocks.
+Utiliser `fdisk –l` pour voir 3,9 Gib donc équivalent a 4,2 GB en taille conventionnelle, sinon calculer avec la taille des blocks.
 
 <br>
 
@@ -133,9 +133,52 @@ failregex = ^<HOST> -.*"(GET|POST).*
 ignoreregex =
 ```
 
+Tester :
+
+Sur la machine attaquante lancer :
+
+```sh
+python3 slowloris.py -v 192.168.1.254 #installation
+```
+
+Au bout de 600 tentatives : connection refused
+Sur la machine deby :
+
+```sh
+sudo fail2ban-client status #pour voir si une ip a été bannie
+sudo fail2ban-client status apache-dos #pour voir l'ip bannie
+sudo fail2ban-client unban --all #pour unban toutes les ip
+```
+
+https://github.com/gkbrk/slowloris pour le dos
+
 ### > Protection contre le scan de ports
+
+https://www.geeek.org/portsentry-linux-securite/
 
 ```sh
 sudo apt install portsentry #installation de portcdsentry
 
+```
+
+Les adresses bloquées peuvent être retrouvées dans le fichier /var/lib/portsentry/portsentry.history
+
+```sh
+sudo route -n # pour voir toutes les connections bloquees
+sudo ip r
+
+```
+
+```sh
+sudo ip r del 192.168.1.252/30 # unban l'ip
+```
+
+enlever aussi l'entrée dans /etc/hosts.deny
+
+lancer un test abec nmap + ip
+
+### > Arreter les services inutiles
+
+```sh
+service --status-all #show all services that are running
 ```
