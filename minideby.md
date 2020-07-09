@@ -182,3 +182,6 @@ lancer un test abec nmap + ip
 ```sh
 service --status-all #show all services that are running
 ```
+
+services inutiles: apparmor
+dbus utile pour les ouvertures de sessions
