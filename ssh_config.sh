@@ -1,3 +1,4 @@
+#! /bin/bash
 apt install openssh-server
 if grep -q "Port 2222" /etc/ssh/sshd_config
 then

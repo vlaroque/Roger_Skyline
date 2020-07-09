@@ -1,3 +1,4 @@
+#! /bin/bash
 apt install ufw
 ufw allow 22 #trap for port scans
 ufw allow 80 #http

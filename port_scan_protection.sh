@@ -1,3 +1,4 @@
+#! /bin/bash
 apt install -y --force-yes portsentry
 sed -i "s/BLOCK_UDP=\"0\"/BLOCK_UDP=\"1\"/" /etc/portsentry/portsentry.conf
 sed -i "s/BLOCK_TCP=\"0\"/BLOCK_TCP=\"1\"/" /etc/portsentry/portsentry.conf

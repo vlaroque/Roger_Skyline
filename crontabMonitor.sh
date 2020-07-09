@@ -1,9 +1,9 @@
 #! /bin/bash
 cat /var/log/syslog | grep crontab | grep RELOAD | tail -n 1 > new_crontab_change
 touch last_crontab_change new_crontab_change
-if diff last_crontab_change new_crontab_change ;then
+if @diff last_crontab_change new_crontab_change ;then
 	#same
-	echo lol
+	echo no modifications
 else
 	#difft
 	echo new_crontab_change
